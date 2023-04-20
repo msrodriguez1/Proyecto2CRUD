@@ -1,0 +1,144 @@
+
+.header{
+    height: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    align-items: center;
+    padding:50px ;
+    background-color: rgb(0, 46, 93);
+    color: white;
+  
+  }
+  .logo{
+      width: 250px;
+  }
+  .headerLinks{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      gap:15px;
+  }
+  
+  
+  #headerLinks {
+  
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+  
+  }
+  h5{
+      font-size: 20px;
+  }
+  .form{
+      margin-top:40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 200px;
+      gap:10px;
+  }
+  
+  .inputs{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap:10px;
+  }
+  
+  .task{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap:3px;
+  }
+
+  
+  .InputNombre{
+    width:150px;
+  }
+  
+  .InputDescripción{
+      width:250px;
+  }
+  .InputFecha{
+      width: 170px;
+  }
+  .InputEstado{
+    width: 170px;
+  }
+  .InputResponsable{
+    width: 170px;
+  }
+  .InputSubir{
+      width:80px;
+      background-color: white;
+  }
+  
+  *{
+      font-family: 'Roboto Slab', serif;
+  
+  }
+  
+  
+  .task input{
+      height: 20px;
+      border-radius: 10px;
+      border-width: 0.2px;
+      border-color: rgb(196, 195, 195);
+  
+  }
+  
+  .output{
+      display:flex;
+      flex-direction: column;
+      padding-left: 180px;
+      padding-right: 230px;
+  
+  }
+  
+  .Print{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-end;
+      gap:10px;
+  
+  
+  
+  }
+
+
+  .RegistroTarea{
+    position: relative;
+    margin-left:50px;
+    margin-top: 40px;
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 15px;
+  }
+
+
+  .inptNombre{
+    width:150px;
+  }
+
+  .inptDesc{
+    width:250px;
+  }
+
+  .inptFecha{
+    width:170px;
+  }
+
+  .inptResp{
+    width:170px;
+  }
+
+  .inptEstado{
+    width:170px;
+  }

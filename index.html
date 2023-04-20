@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body class="">
+
+    <header class="header">
+        <div>
+            <img class="logo" src="./logoTask.png">
+        </div>
+        <div class="headerLinks">
+            <h5>Get Ready</h5>
+            <a href="#" id="headerLinks">My site</a>
+            <a href="#" id="headerLinks">FAQ's</a>
+        </div>
+    </header>
+    <form class="form">
+        <div class="titulo">
+            <h1>Tu evaluación en simples pasos</h1>
+            <p>Ingresa la información para definir la mejor solución Edify</p>
+        </div>
+        <div class="inputs">
+            <div class="task">
+                <label for="tarea">Item</label>
+                <input id="tarea" name="tarea" type="text" class="InputNombre">
+            </div>
+            <div class="task">
+                <label for="desc">Detalles</label>
+                <input id="desc" name="desc" type="text" class="InputDescripción">
+            </div>
+            <div class="task">
+
+                <label for="fecha">Fecha</label>
+                <input id="fecha"  name="fecha" type="date" class="InputFecha">
+            </div>
+            <div class="task">
+                <label for="resp">Riesgos</label>
+                <input id="resp" name="resp" type="text" class="InputResponsable">
+            </div>
+            <div class="task">
+                <label for="estado">Calificación</label>
+                <input id="estado" name="estado" type="text" class="InputEstado">
+            </div>
+            <div class="task">
+                <input type="submit" class="InputSubir">
+            </div>
+        </div>
+
+    </form>
+    <div class="output">
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
