@@ -49,6 +49,7 @@ function validarFormulario(e) {
 
         agregarTarea();
     }
+
 }
 //FUNCION AREGAR EMPLEADO
 function agregarTarea() {
@@ -61,6 +62,7 @@ function agregarTarea() {
     inputs.reset();
   //LIMPIAR OBJETO
     limpiarObjeto();
+    saveDataLS();
 }
 
 function limpiarObjeto() {
@@ -157,6 +159,7 @@ function editarTarea() {
     inputs.querySelector('input[type="submit"]').textContent = 'Agregar';
     // apaga el valor editando
     editar = false;
+    saveDataLS();
 }
 
 function eliminarTarea(id) {
@@ -166,6 +169,7 @@ function eliminarTarea(id) {
     limpiarHTML();
   //Vuelve a mostrar lista
     mostrarTareas();
+    saveDataLS();
 }
 
 function limpiarHTML() {
@@ -175,3 +179,15 @@ function limpiarHTML() {
         divTareas.removeChild(divTareas.firstChild);
     }
 }
+
+
+function saveDataLS(){
+    localStorage.setItem('tareas',JSON.stringify(listaTareas))
+}
+
+function readDataLS(){
+   const tareas= JSON.parse(localStorage.getItem('tareas'))
+   listaTareas=tareas;
+   mostrarTareas();
+}
+readDataLS();
