@@ -11,6 +11,6 @@ La aplicación cuenta con cuatro funcionalidades básicas:
 - **Borrar:** Puedes eliminar registros existentes haciendo clic en el botón "Eliminar" en cada registro.
 
 ## LINK:
--https://starlit-sunshine-2026ce.netlify.app/
--https://msrodriguez1.github.io/Proyecto2CRUD/
+-**Netlify:**https://starlit-sunshine-2026ce.netlify.app/
+-**GitHub:**https://msrodriguez1.github.io/Proyecto2CRUD/
 
