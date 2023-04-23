@@ -49,8 +49,8 @@ function createRow(tarea) {
                      <div class='inptFecha'>${tarea.fecha}</div>
                      <div class='inptResp'>${tarea.responsable}</div>
                      <div class='inptEstado'>${tarea.estado}</div>
-                     <button type="button" class="btn btn-secondary" onclick="updateTask(${tarea.id})">editar</button> 
-                     <button type="button" class="btn btn-warning" onclick="deleteTask(${tarea.id})">eliminar</button>
+                     <button id="button" type="button" class="btn-editar" onclick="updateTask(${tarea.id})">editar</button> 
+                     <button id="button" type="button" class="btn-eliminar" onclick="deleteTask(${tarea.id})">eliminar</button>
                      </div>`;
 
 
@@ -89,7 +89,7 @@ function updateTask(id) {
     estadoInput.value = tareaU.estado;
 
     editionId = id;
-    const deleteButton = document.querySelector('.btn btn-warning');
+    const deleteButton = document.querySelector('.btn-eliminar');
     deleteButton.style.display = 'none';
     
 }
@@ -114,8 +114,8 @@ function editaTarea(event) {
     <div class='inptFecha'>${valores.fecha}</div>
     <div class='inptResp'>${valores.responsable}</div>
     <div class='inptEstado'>${valores.estado}</div>
-    <button type="button" class="btn btn-secondary" onclick="updateTask(${valores.id})">editar</button> 
-    <button type="button" class="btn btn-warning" onclick="deleteTask(${valores.id})">eliminar</button>`;
+    <button id="button" class="btn-editar" onclick="updateTask(${valores.id})">editar</button> 
+    <button id="button" class="btn-eliminar" onclick="deleteTask(${valores.id})">eliminar</button>`;
 
 
     
