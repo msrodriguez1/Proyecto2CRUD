@@ -49,8 +49,8 @@ function createRow(tarea) {
                      <div class='inptFecha'>${tarea.fecha}</div>
                      <div class='inptResp'>${tarea.responsable}</div>
                      <div class='inptEstado'>${tarea.estado}</div>
-                     <button class="btn-editar" onclick="updateTask(${tarea.id})">editar</button> 
-                     <button class="btn-eliminar" onclick="deleteTask(${tarea.id})">eliminar</button>
+                     <button type="button" class="btn btn-secondary" onclick="updateTask(${tarea.id})">editar</button> 
+                     <button type="button" class="btn btn-warning" onclick="deleteTask(${tarea.id})">eliminar</button>
                      </div>`;
 
 
@@ -89,20 +89,24 @@ function updateTask(id) {
     estadoInput.value = tareaU.estado;
 
     editionId = id;
-    const deleteButton = document.querySelector('.btn-eliminar');
+    const deleteButton = document.querySelector('.btn btn-warning');
     deleteButton.style.display = 'none';
+    
 }
 
 function editaTarea(event) {
-    event.preventDefault();
-    const valores=readForm();
-    valores.id=editionId;
+    event.preventDefault()
+    const valores=readForm()
+    valores.id=editionId
+    //console.log(valores)
 
 
-    const index= tareas.find((tarea)=>tarea.id===editionId);
-    tareas.splice(index,1,valores);
-    saveDataLS();
-
+    const index = tareas.findIndex((tarea)=>tarea.id===editionId)
+    console.log(index)
+    tareas.splice(index,1,valores)
+    tareas=tareas.slice(0,-1)
+    saveDataLS()
+ 
 
     const row= document.getElementById(editionId)
     row.innerHTML= `<div class='inptNombre'>${valores.nombre}</div>
@@ -110,8 +114,8 @@ function editaTarea(event) {
     <div class='inptFecha'>${valores.fecha}</div>
     <div class='inptResp'>${valores.responsable}</div>
     <div class='inptEstado'>${valores.estado}</div>
-    <button class="btn-editar" onclick="updateTask(${valores.id})">editar</button> 
-    <button class="btn-eliminar" onclick="deleteTask(${valores.id})">eliminar</button>`;
+    <button type="button" class="btn btn-secondary" onclick="updateTask(${valores.id})">editar</button> 
+    <button type="button" class="btn btn-warning" onclick="deleteTask(${valores.id})">eliminar</button>`;
 
 
     
@@ -119,15 +123,16 @@ function editaTarea(event) {
     editionId=null
     editMode=false
     addButton.innerText='Agregar'
-    const deleteButton = document.querySelector('.btn-eliminar');
-    deleteButton.style.display = 'block';
+    const deleteButton = document.querySelector('.btn-eliminar')
+    deleteButton.style.display = 'block'
+
+    console.log(tareas)
 
     
 }
 
-
-
 function saveDataLS() {
+    localStorage.removeItem('tareas');
     localStorage.setItem('tareas', JSON.stringify(tareas))
 }
 
