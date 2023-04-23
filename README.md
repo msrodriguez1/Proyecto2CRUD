@@ -10,4 +10,7 @@ La aplicación cuenta con cuatro funcionalidades básicas:
 - **Actualizar:** Puedes actualizar las tareas existentes clickeando el botón de editar.
 - **Borrar:** Puedes eliminar registros existentes haciendo clic en el botón "Eliminar" en cada registro.
 
-## LINK:https://starlit-sunshine-2026ce.netlify.app/
+## LINK:
+-https://starlit-sunshine-2026ce.netlify.app/
+-https://msrodriguez1.github.io/Proyecto2CRUD/
+
